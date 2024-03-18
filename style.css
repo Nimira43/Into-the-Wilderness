@@ -1,17 +1,18 @@
 :root {
-    --clr-prim-1: goldenrod; 
-    --clr-prim-2: darkgoldenrod;
+    --clr-prim-1: goldenrod;
+    --clr-prim-2: darkgoldenrod; 
     --clr-prim-3: gold;
     --clr-prim-4: yellow;
     --clr-prim-5: lightyellow;
     --clr-black: #101010;
+    --clr-grey-0: #111;
     --clr-grey-1: #333;
     --clr-grey-2: #888;
     --clr-grey-3: #ccc;
     --clr-white-1: beige;
     --clr-white-2: khaki;
     --clr-white: white;
-    --clr-green-0: rgb(0, 50, 0);
+    --clr-green-0: rgb(0, 25, 0);
     --clr-green-1: rgb(0, 100, 0);
     --clr-green-2: rgb(0, 128, 0);
     --clr-green-3: rgb(34, 139, 34);
@@ -120,6 +121,13 @@ p {
     background: var(--clr-prim-3);
 }
 
+.clearfix::after,
+.clearfix::before {
+    content: '';
+    clear: both;
+    display: table;
+}
+
 .header {
     min-height: 100vh;
     background: linear-gradient(
@@ -158,4 +166,61 @@ p {
     font-size: 1.25rem;
     padding: 1rem 1.75rem
 }
+
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(
+        to left,
+        var(--clr-prim-2),
+        var(--clr-prim-1),
+        var(--clr-prim-2)
+    );
+}
+
+.tours {
+    background: var(--clr-grey-0);
+}
+
+.tour {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tour-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+    display: inline-block;
+    color: var(--clr-green-1);
+}
+
+.tour-text {
+    color: var(--clr-prim-1);
+    max-width: 17rem;
+    margin: 0 auto;
+}
+
+.tour:hover {
+    background: var(--clr-green-0);
+    box-shadow: 0 2px var(--clr-prim-1)
+}
+
+.tour:hover .tour-icon {
+    transform: translateY(-5px) scale(1.2);
+}
+
+@media screen and (min-width: 576px) {
+    .tour {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tour {
+        width: 25%;
+    }
+}
+
 
