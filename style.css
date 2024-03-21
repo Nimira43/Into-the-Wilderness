@@ -418,3 +418,24 @@ p {
         width: 50%;
     }
 }
+
+.footer {
+    background: var(--clr-grey-0);
+    text-align: center;
+}
+
+.social-icon {
+    color: var(--clr-prim-1);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    color: var(--clr-green-1);
+}
+
+.footer-text {
+    margin-top: 1.25rem;
+    color: var(--clr-prim-1);
+}
