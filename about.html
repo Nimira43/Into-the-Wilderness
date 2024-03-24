@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,76 @@
     <link rel="stylesheet" href="style.css">
     <title>Into the Wilderness | About Us</title>
 </head>
+
 <body>
-    <h1>About</h1>
-    <a href="index.html">Home</a>
-</body>
-</html>
+    <span class="nav-btn" id="nav-btn">
+        <i class="fas fa-bars"></i>
+    </span>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-header">
+            <span class="nav-close" id="nav-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <ul class="nav-items">
+            <li><a href="index.html" class="nav-link">home</a></li>
+            <li><a href="tours.html" class="nav-link">tours</a></li>
+            <li><a href="themes.html" class="nav-link">themes</a></li>
+            <li><a href="about.html" class="nav-link">about</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <div class="banner">
+            <h2>Seek Out New Adventures</h2>
+            <h1>into the <br>wilderness</h1>
+            <a href="themes.html" class="btn banner-btn">explore</a>
+        </div>
+    </header>
+    <section>
+        <div class="section-center clearfix">
+            <article class="about-img">
+                <div class="about-picture-container">
+                    <img src="./img/about-bg.jpg" alt="forest" class="about-picture">
+                </div>
+            </article>
+            <article class="about-info">
+                <div class="section-title">
+                    <h3>check out our</h3>
+                    <h2>epic treks</h2>
+                </div>
+                <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci recusandae
+                    laboriosam nihil neque fuga amet.</p>
+                <p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, a? Sint voluptatibus
+                    illum repudiandae animi necessitatibus!</p>
+                <a href="about.html" class="btn">read more</a>
+            </article>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="section-center">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-threads"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <h4 class="footer-text">&copy; <span id="date"></span><span> Into the Wilderness. </span> Designed by Nimira
+                Tech.</h4>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    </body>
+    
+    </html>
