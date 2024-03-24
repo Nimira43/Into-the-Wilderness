@@ -151,6 +151,18 @@ p {
     }
 }
 
+@keyframes bounce {
+    0% {
+        transform: scale(1);      
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .nav-btn {
     position: fixed;
     top: 5%;
@@ -160,6 +172,11 @@ p {
     text-shadow: 2px 2px 0 var(--clr-green-2);
     z-index: 1;
     cursor: pointer;
+    animation: bounce 2s ease-in infinite;
+}
+
+.nav-btn:hover {
+    color: var(--clr-prim-3);
 }
 
 .navbar {
@@ -188,8 +205,9 @@ p {
 .nav-close {
     font-size: 2.5rem;
     cursor: pointer;
-    color: var(--clr-prim-1);
+    color: var(--clr-white-1);
     transition: var(--transition);
+    text-shadow: 12px 2px 0 var(--clr-grey-0);
 }
 
 .nav-close:hover {
@@ -211,8 +229,7 @@ p {
 
 .nav-link:hover {
     background: var(--clr-prim-1);
-    color: var(--clr-grey-0);
-    
+    color: var(--clr-grey-0);  
 }
 
 @media screen and (min-width: 768px) {
@@ -240,10 +257,55 @@ p {
     transform: translate(-50%, -50%);
 }
 
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-200px);
+        opacity: 0.5;
+    }
+
+    75% {
+        transform: translateX(50px);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 .banner h2 { 
     font-family: var(--ff-feature);
     color: var(--clr-prim-5);
     text-shadow: 2px 2px 0 var(--clr-green-2);
+    animation: slideFromRight 5s ease-in-out 1;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(200px);
+        opacity: 0.5;
+    }
+
+    75% {
+        transform: translateX(-50px);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
 .banner h1 {
@@ -252,6 +314,7 @@ p {
     text-shadow: 2px 2px 0 var(--clr-green-2);
     margin-top: 1.25rem;
     margin-bottom: 2rem;
+    animation: slideFromLeft 5s ease-in-out 1;
 }
 
 .banner-btn {
@@ -259,11 +322,29 @@ p {
     outline-offset: 0.25rem;
     font-size: 1.25rem;
     padding: 0.65rem 1.40rem;
-    box-shadow: -3px 2px 3px 3px var(--clr-green-1),
-                2px -3px 3px 3px var(--clr-green-1);
+    box-shadow: -3px 2px 3px 3px var(--clr-green-0),
+                2px -3px 3px 3px var(--clr-green-0);
+    animation: show 5s linear 1;
+            }
+
+@keyframes show {
+    0% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-.banner-btn {
+.banner-btn:hover {
     box-shadow: -3px 2px 3px 3px var(--clr-green-2),
                 2px -3px 3px 3px var(--clr-green-2);
 }
