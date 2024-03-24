@@ -157,8 +157,69 @@ p {
     left: 5%;
     font-size: 2.5rem;
     color: var(--clr-white-1);
+    text-shadow: 2px 2px 0 var(--clr-green-2);
     z-index: 1;
     cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--clr-green-0);
+    z-index: 2;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.showNav {
+    transform: translateX(0);
+    box-shadow: 2px 0 2px var(--clr-prim-1);
+}
+
+.navbar-header {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.nav-close {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--clr-prim-1);
+    transition: var(--transition);
+}
+
+.nav-close:hover {
+    color: var(--clr-prim-3);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    color: var(--clr-prim-1);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    background: var(--clr-prim-1);
+    color: var(--clr-grey-0);
+    
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        width: 30vw;
+        max-width: 20rem;
+    }
 }
 
 .header {
